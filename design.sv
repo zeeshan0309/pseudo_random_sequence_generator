@@ -1,9 +1,13 @@
 // Code your design here
+/*  for 5th degree polynonial, tapping
+    done at 5th and 2nd flip-flops to obtain
+    longest sequence*/
+
 module pseudo_random_5_bit(A, load, clk, rst);
   output reg [4:0]A;
   input clk, rst;
-  input [4:0] load;
-  
+  input [4:0] load;       //loading initial value of sequence
+                          
   always@(posedge clk, negedge rst) begin
     if(!rst) begin
       A[4:0] <= load[4:0];
